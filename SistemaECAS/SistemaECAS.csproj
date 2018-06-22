@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BAE9034-4A4F-403E-AEC5-6AD7012B39E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaECAS</RootNamespace>
+    <AssemblyName>SistemaECAS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="certificados\Default.aspx" />
+    <Content Include="fichaegresado\admin\idioma.aspx" />
+    <Content Include="fichaegresado\admin\rangoRenta.aspx" />
+    <Content Include="fichaegresado\admin\tipoEstudio.aspx" />
+    <Content Include="fichaegresado\agregarEstudio.aspx" />
+    <Content Include="fichaegresado\agregarIdioma.aspx" />
+    <Content Include="fichaegresado\agregarLaboral.aspx" />
+    <Content Include="fichaegresado\agregarNota.aspx" />
+    <Content Include="fichaegresado\borrarEstudio.aspx" />
+    <Content Include="fichaegresado\borrarIdioma.aspx" />
+    <Content Include="fichaegresado\borrarLaboral.aspx" />
+    <Content Include="fichaegresado\borrarNota.aspx" />
+    <Content Include="fichaegresado\buscarEgresado.aspx" />
+    <Content Include="fichaegresado\Default.aspx" />
+    <Content Include="fichaegresado\editarPersonales.aspx" />
+    <Content Include="fichaegresado\fichaEgresado.aspx" />
+    <Content Include="fichaegresado\imagenes\add.png" />
+    <Content Include="fichaegresado\imagenes\cross.png" />
+    <Content Include="fichaegresado\imagenes\page_edit.png" />
+    <Content Include="fichaegresado\imagenes\star.png" />
+    <Content Include="fichaegresado\imagenes\star1.png" />
+    <Content Include="fichaegresado\imagenes\star2.png" />
+    <Content Include="fichaegresado\imagenes\star3.png" />
+    <Content Include="fichaegresado\imagenes\star4.png" />
+    <Content Include="fichaegresado\imagenes\star5.png" />
+    <Content Include="mailmasivo\adjuntos\empty.txt" />
+    <Content Include="mailmasivo\crearFormato.aspx" />
+    <Content Include="mailmasivo\Default.aspx" />
+    <Content Include="mailmasivo\ejemplo.png" />
+    <Content Include="mailmasivo\envios.aspx" />
+    <Content Include="mailmasivo\exito.aspx" />
+    <Content Include="mailmasivo\formatos.aspx" />
+    <Content Include="mailmasivo\jscripts\examples\css\content.css" />
+    <Content Include="mailmasivo\jscripts\examples\css\word.css" />
+    <Content Include="mailmasivo\jscripts\examples\custom_formats.html" />
+    <Content Include="mailmasivo\jscripts\examples\full.html" />
+    <Content Include="mailmasivo\jscripts\examples\index.html" />
+    <Content Include="mailmasivo\jscripts\examples\lists\image_list.js" />
+    <Content Include="mailmasivo\jscripts\examples\lists\link_list.js" />
+    <Content Include="mailmasivo\jscripts\examples\lists\media_list.js" />
+    <Content Include="mailmasivo\jscripts\examples\lists\template_list.js" />
+    <Content Include="mailmasivo\jscripts\examples\media\logo.jpg" />
+    <Content Include="mailmasivo\jscripts\examples\media\logo_over.jpg" />
+    <Content Include="mailmasivo\jscripts\examples\media\sample.avi" />
+    <Content Include="mailmasivo\jscripts\examples\media\sample.mov" />
+    <Content Include="mailmasivo\jscripts\examples\media\sample.swf" />
+    <Content Include="mailmasivo\jscripts\examples\menu.html" />
+    <Content Include="mailmasivo\jscripts\examples\simple.html" />
+    <Content Include="mailmasivo\jscripts\examples\skins.html" />
+    <Content Include="mailmasivo\jscripts\examples\templates\layout1.htm" />
+    <Content Include="mailmasivo\jscripts\examples\templates\snippet1.htm" />
+    <Content Include="mailmasivo\jscripts\examples\translate.html" />
+    <Content Include="mailmasivo\jscripts\examples\word.html" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\langs\en.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\license.txt" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\autosave\langs\en.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\css\content.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\img\flash.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\img\flv_player.swf" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\img\quicktime.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\img\realmedia.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\img\shockwave.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\img\trans.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\img\windowsmedia.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\media\media.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\pagebreak\css\content.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\pagebreak\img\pagebreak.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\pagebreak\img\trans.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\preview\example.html" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\style\props.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\template\template.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\tiny_mce.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="mailmasivo\jscripts\tiny_mce\utils\validate.js" />
+    <Content Include="mailmasivo\previsualizarCorreo.aspx" />
+    <Content Include="mailmasivo\seleccionarAdjuntos.aspx" />
+    <Content Include="mailmasivo\subirArchivo.aspx" />
+    <Content Include="ChequearUsuario.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Imagenes\encabezado.jpg" />
+    <Content Include="Imagenes\encabezado.png" />
+    <Content Include="ingreso.aspx" />
+    <Content Include="permisos.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="sincronizacion\Default.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\Conexion.cs" />
+    <Compile Include="Base1.Master.cs">
+      <DependentUpon>Base1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="certificados\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\admin\idioma.aspx.cs">
+      <DependentUpon>idioma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\admin\rangoRenta.aspx.cs">
+      <DependentUpon>rangoRenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\admin\tipoEstudio.aspx.cs">
+      <DependentUpon>tipoEstudio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\agregarEstudio.aspx.cs">
+      <DependentUpon>agregarEstudio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\agregarIdioma.aspx.cs">
+      <DependentUpon>agregarIdioma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\agregarLaboral.aspx.cs">
+      <DependentUpon>agregarLaboral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\agregarNota.aspx.cs">
+      <DependentUpon>agregarNota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\borrarEstudio.aspx.cs">
+      <DependentUpon>borrarEstudio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\borrarIdioma.aspx.cs">
+      <DependentUpon>borrarIdioma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\borrarLaboral.aspx.cs">
+      <DependentUpon>borrarLaboral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\borrarNota.aspx.cs">
+      <DependentUpon>borrarNota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\buscarEgresado.aspx.cs">
+      <DependentUpon>buscarEgresado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\Class2.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fichaegresado\editarPersonales.aspx.cs">
+      <DependentUpon>editarPersonales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\fichaEgresado.aspx.cs">
+      <DependentUpon>fichaEgresado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fichaegresado\listados.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\crearFormato.aspx.cs">
+      <DependentUpon>crearFormato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\envios.aspx.cs">
+      <DependentUpon>envios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\exito.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\formatos.aspx.cs">
+      <DependentUpon>formatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\previsualizarCorreo.aspx.cs">
+      <DependentUpon>previsualizarCorreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\remitentes.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\seleccionarAdjuntos.aspx.cs">
+      <DependentUpon>seleccionarAdjuntos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailmasivo\subirArchivo.aspx.cs">
+      <DependentUpon>subirArchivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChequearUsuario.aspx.cs">
+      <DependentUpon>ChequearUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ingreso.aspx.cs">
+      <DependentUpon>ingreso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sincronizacion\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Base1.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6009</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SGECAS</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

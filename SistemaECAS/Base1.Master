@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base1.master.cs" Inherits="SistemaECAS.Base1" Debug="true" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SG Ecas</title>
+    <link href="/Styles/Site.css" rel="stylesheet" type="text/css" runat="server" id="style" />
+    <style type="text/css">
+    .menu 
+    {
+        font-size: .9em;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+    
+    .titulo
+    {
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+        
+    .subtitulo 
+    {
+        font-size: .9em;
+        width: 33%;
+    }
+    </style>
+   
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Muestra y oculta los menús
+            $('ul li:has(ul)').hover(
+		    function (e) {
+		        $(this).find('ul').show();
+		    },
+		    function (e) {
+		        $(this).find('ul').hide();
+		    }
+	    );
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form2" runat="server" enctype="multipart/form-data">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>&nbsp;</h1>
+            </div>
+            <div class="loginDisplay" runat="server" id="loginDisplay_">
+            </div>
+            <div class="clear hideSkiplink">
+            </div>
+            <div class="menu" id="menu_r" runat="server">
+            <ul class="menud">
+                <li><asp:HyperLink runat="server" ID="mInicio" NavigateUrl="/Default.aspx">Inicio</asp:HyperLink></li>
+                <li><a href="." onclick="return false;" style="cursor: default;">Mail Masivo</a>
+                    <ul>
+                        <li><asp:HyperLink runat="server" ID="mEscribir" NavigateUrl="/mailmasivo/Default.aspx">Escribir</asp:HyperLink></li>
+                        <li runat="server" id="linkFormato"><asp:HyperLink runat="server" ID="mFormatos" NavigateUrl="/mailmasivo/formatos.aspx">Formatos</asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" ID="mEnvios" NavigateUrl="/mailmasivo/envios.aspx">Env&iacute;os</asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li><a href="." onclick="return false;" style="cursor: default;">Ficha Egresado</a> 
+                    <ul>
+                        <li><asp:HyperLink runat="server" ID="mBuscar" NavigateUrl="/fichaegresado/Default.aspx">Buscar</asp:HyperLink></li>
+                        <li runat="server" id="linkIdioma"><asp:HyperLink runat="server" ID="mIdiomas" NavigateUrl="/fichaegresado/admin/idioma.aspx">Idiomas</asp:HyperLink></li>
+                        <li runat="server" id="linkRenta"><asp:HyperLink runat="server" ID="mRangoRenta" NavigateUrl="/fichaegresado/admin/rangoRenta.aspx">Rango renta</asp:HyperLink></li>
+                        <li runat="server" id="linkEstudios"><asp:HyperLink runat="server" ID="mTipoEstudios" NavigateUrl="/fichaegresado/admin/tipoEstudio.aspx">Grados acad&eacute;micos</asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li><asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="/certificados/">Certificados</asp:HyperLink></li>
+                <li id="admin_" runat="server"><a href="." onclick="return false;" style="cursor: default;">Administraci&oacute;n</a>
+                    <ul>
+                        <li><asp:HyperLink runat="server" ID="mPermisos" NavigateUrl="/permisos.aspx">Permisos</asp:HyperLink></li>
+                        <li><asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="/sincronizacion/">Sincronizaci&oacute;n</asp:HyperLink></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>   
+        <div class="clear"></div> 
+    </div>
+    <div class="footer" runat="server">
+        Escuela de Contadores Auditores de Santiago <asp:Label ID="strAno" runat="server" /><br />
+        Versi&oacute;n actualizada en <asp:Label ID="lastUpdate" runat="server" />
+    </div>
+    </form>
+</body>
+</html>
